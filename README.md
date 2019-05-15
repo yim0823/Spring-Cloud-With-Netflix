@@ -61,6 +61,13 @@ Service discovery with Eureka
 Eureka - Server
 ----------------
 참고 : https://github.com/phantasmicmeans/Spring-Cloud-Netflix-Eureka-Tutorial/
+### version
+우리가 Eureka Server 구축에 사용할 version은 다음과 같다:
+> - spring-boot-gradle-plugin:2.0.2.RELEASE
+> - spring-cloud-dependencies:Greenwich.RELEASE
+> - spring-cloud-starter-netflix-eureka-server:2.1.1.RELEASE
+> - java - 1.8
+> - gradle-docker:0.13.0
 
 Reference
 ----------------
