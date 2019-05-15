@@ -58,6 +58,10 @@ Service discovery with Eureka
 
 여기서는 Eureka란 무엇인지, 어떻게 구성되어있는지, 그리고 Eureka의 개념에 대해 간단하게 설명했지만, Eureka의 활용도는 무궁무진하며 Service Discovery & Registry란 개념은 다음 장에서 설명하게 될 Netflix의 다른 component인 Hystrix, Ribbon, Zuul과 결합되어 질 때 활용도가 매우 높아진다.
 
+Eureka - Server
+----------------
+참고 : https://github.com/phantasmicmeans/Spring-Cloud-Netflix-Eureka-Tutorial/
+
 Reference
 ----------------
 - [Part 1: Using Netflix Eureka, Ribbon and Zuul](https://callistaenterprise.se/blogg/teknik/2015/04/10/building-microservices-with-spring-cloud-and-netflix-oss-part-1/)
