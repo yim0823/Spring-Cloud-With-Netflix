@@ -69,6 +69,35 @@ Eureka - Server
 > - java - 1.8
 > - gradle-docker:0.13.0
 
+### configuration
+Spring Boot에서는 SnakeYAML을 포함하고 있기에 외부파일은 YAML로 작성 가능하다. Bootstrap.yml 파일은 spring cloud application에서 application.yml 파일보다 먼저 실행된다. 따라서 상황에 맞게 사용하면 된다.
+
+#### application.yml
+Eureka Server를 standalone하게 활용하는 방법이다. 이 외에도 상세한 설명은 다음을 참고하자. (https://cloud.spring.io/spring-cloud-netflix/single/spring-cloud-netflix.html#spring-cloud-eureka-server-standalone-mode)
+```
+server:
+    port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+        waitTimeInMsWhenSyncEmpty: 0
+        ## Set this only for this sample service without which starting the instance will by default wait for the default of 5 mins
+```
+
+#### bootstrap.yml
+application 이름을 지정한다. 추후에 Eureka Client가 Eureka Server에 자신을 등록할 때 application.name으로 등록된다.
+```
+spring:
+    application:
+        name: eureka-server
+```
+
+#### 참고
+추후에 Eureka Client가 Eureka에 등록될 때 eurek.client.hostname으로 등록된다. 그래서 때때로 ipAddress를 써야하는 경우도 생긴다. 이것은 Eureka Client 구축 단계에서 다시 설명할 것이니 알아두면 된다.
+
 Reference
 ----------------
 - [Part 1: Using Netflix Eureka, Ribbon and Zuul](https://callistaenterprise.se/blogg/teknik/2015/04/10/building-microservices-with-spring-cloud-and-netflix-oss-part-1/)
